@@ -3,6 +3,8 @@
 DOCS=()
 TEXDIR=./src
 OUTPUT_DIR=./pdf
+RENDER_TIMEOUT=8
+
 function fatal(){
   echo "Error occured: $1"
   exit "$2"
@@ -16,7 +18,7 @@ function read_files(){
 }
 
 function render_doc(){
-  pdflatex "--output-directory=${OUTPUT_DIR}" "${TEXDIR}/$1.tex" > /dev/null || fatal "Could not render $1" 1
+  timeout "$RENDER_TIMEOUT" pdflatex "--output-directory=${OUTPUT_DIR}" "${TEXDIR}/$1.tex" > /dev/null || fatal "Could not render $1" 1
   rm "${OUTPUT_DIR}/$1.aux"
   rm "${OUTPUT_DIR}/$1.log"
 }
