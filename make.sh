@@ -5,6 +5,7 @@ TEXDIR=./src
 OUTPUT_DIR=./pdf
 RENDER_TIMEOUT=8
 
+
 function fatal(){
   echo "Error occured: $1"
   exit "$2"
@@ -32,15 +33,16 @@ Document renderer
 ---
 EOF
 
-echo "Looking for documents..."
-read_files
-echo "Found ${#DOCS[@]} document(s)"
-
-for index in "${!DOCS[@]}"
-do
+if [ "$#" -eq  "0" ]; then
+  echo "Looking for documents..."
+  read_files
+  echo "Found ${#DOCS[@]} document(s)"
+else
+  DOCS=( "$@" )
+fi
+for index in "${!DOCS[@]}"; do
   doc="${DOCS[index]}"
-  echo "rendering document $(($index+1)) of ${#DOCS[@]}: $doc"
+  echo "rendering document $((index+1)) of ${#DOCS[@]}: $doc"
   render_doc "$doc"
 done
-
 echo "Rendered ${#DOCS[@]} document(s)"
