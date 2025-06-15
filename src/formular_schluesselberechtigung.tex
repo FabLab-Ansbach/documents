@@ -1,0 +1,61 @@
+\documentclass[a4paper,12pt]{article}
+
+% Pakete
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{parskip} % Abstand zwischen Absätzen
+\usepackage{fancyhdr}
+\usepackage{titling}
+\usepackage[pdftex]{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Seitenränder
+\geometry{left=2.5cm, right=2.5cm, top=3cm, bottom=3cm}
+
+% Kein Seitenkopf oder -fuß
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}
+    \includegraphics[width=0.3\textwidth]{images/fablab-logo.png} \\
+    \vspace{1cm}
+    \LARGE\textbf{Erteilung der Schlüsselberechtigung} \\
+    \vspace{0.5cm}
+    \large FabLab Ansbach e.V.
+\end{center}
+
+\vspace{2cm}
+\noindent
+\begin{Form}
+Hiermit wird gemäß Schlüsselordnung des FabLab Ansbach e.V. dem Mitglied\\
+\textbf{Name, Vorname: }\TextField[name=name,width=7cm]{}\\
+die Schlüsselberechtigung erteilt.\\
+
+Art der Genehmigung (Zutreffendes ankreuzen): 
+\begin{itemize}
+  \item \CheckBox[name=mitgliedEinfach]{} Mitglied seit mehr als 6 Monaten
+  \item \CheckBox[name=mitgleidBeschluss]{} Beschluss der Vorstandssitzung vom \TextField[name=datumBeschluss, width=3.5cm]{}
+  \item \CheckBox[name=vorstand]{} Mitglied des Vorstands
+\end{itemize}
+
+Das Mitglied bestätigt, dass es die aktuelle Schlüsselordnung des FabLab Ansbach e.V. gelesen und verstanden hat. Ihm ist insbesondere bekannt, dass:
+\begin{itemize}
+  \item die Nutzung des Schlüssels mit Verantwortung für Raum und Ausstattung verbunden ist,
+  \item es verpflichtet ist, die Übergabe des Schlüssels zu ordnungsgemäß dokumentieren,
+  \item der Schlüssel nur an schlüsselberechtigte Mitglieder weitergegeben werden darf,
+  \item der Schlüssel bei Entzug der Berechtigung oder Vereinsaustritt zurückzugeben ist.
+\end{itemize}
+Die Schlüsselberechtigung wird erteilt durch \TextField[name=nameErteiler,width=5cm]{}
+in seiner/ihrer Funktion als \TextField[name=postenErteiler,width=5cm]{}
+am \TextField[name=datumErteilt,width=3.5cm]{}.
+\end{Form}
+\vfill
+% Unterschriftenbereich
+\noindent\rule{7cm}{0.4pt} \hfill \rule{7cm}{0.4pt} \\
+\noindent\textit{Unterschrift Mitglied} \hfill \textit{Unterschrift Vorstand}
+
+\end{document}
