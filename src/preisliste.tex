@@ -1,0 +1,48 @@
+\title{Preisliste}
+\author{FabLab Ansbach e.V.}
+\date{07.06.2025}
+
+\input{template}
+
+\makeatletter
+\newcommand*{\thead}[1]{\multicolumn{1}{c}{\bfseries #1}}
+\makeatother
+
+\begin{document}
+
+\begin{center}
+    \LARGE\textbf{Preisliste FabLab Ansbach}
+\end{center}
+Bei den Maschinen wird als Berechungsgrundlage Grundsätzlich die Schätzung an Materialverbrauch (3D-Druck) bzw. die Größe des Modells (Lasercutter) genutzt. \\
+Für die Nutzung der Maschinen wird kein weiterer Aufpreis erhoben.\\
+Nicht-Mitglieder zahlen einen Aufschlag von ca. 20\%. Der genaue Preis ist der Liste unter "Preis Externe" zu entnehmen.\\
+Die Preise richten sich an Privatpersonen, die das FabLab nutzen. Preise für Schulen, Firmen und andere Organisationen sind mit dem Vorstand abzustimmen. \\
+
+Gültig ab: 1. August 2025\\
+
+\section{Lasercutter} % Aufschlag: ca. 30% generell (wartung, etc), 10% Verschnitt; Externe nochmal +20%
+\begin{center}
+  \begin{tabular}{|p{0.3\linewidth}|p{0.1\linewidth}|p{0.1\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|}
+    \thead{Material} & \thead{Einheit} & \thead{Preis Mitglieder} & \thead{Preis Externe}  & \thead{Grundlage}\\ \hline
+    Sperrholz "Laser" 2mm & 1dm² & 0,80€ & 0,96€ & VisiCut/Lightburn \\ \hline  % Einkauf aktuell 0,69€/dm² / Alternative finden!
+    Sperrholz "Laser" 4mm & 1dm² & 0,81€ & 0,98€ & VisiCut/Lightburn \\ \hline  % Einkauf aktuell 0,70€/dm² / Nicht mehr kaufen!
+    Sperrholz Pappel 4mm & 1dm² & 0,40€ & 0,48€ & VisiCut/Lightburn \\ \hline  % Einkauf aktuell 0.26€/dm²  FeinschnittKREATIV
+    Sperrholz Pappel 6mm & 1dm² & 0,50€ & 0,60€ & VisiCut/Lightburn \\ \hline  % Einkauf aktuell 0.36€/dm²  FeinschnittKREATIV
+    Acrylglas Transparent 2mm & 1dm² & 0,42€ & 0,50€ & VisiCut/Lightburn \\ \hline  % Einkauf aktuell 0.28€/dm² Plattenzuschnitt24
+    Acrylglas Transparent 4mm & 1dm² & 0,73€ & 0,90€ & VisiCut/Lightburn \\ \hline  % Einkauf aktuell 0.52€/dm² Plattenzuschnitt24
+    Acrylglas Transparent 8mm & 1dm² & 1,57€ & 1,90€ & VisiCut/Lightburn \\ \hline  % Einkauf aktuell 1.12€/dm² Plattenzuschnitt24
+    Acrylglas Schwarz 3mm & 1dm² & 0,42€ & 0,50€ & VisiCut/Lightburn \\ \hline  % Einkauf aktuell 0.28€/dm² Plattenzuschnitt24
+    eigenes Material (Laserminuten) & min & 0,05€ & 0,08€ & Ausgabe Controller \\ \hline  % Rechnerisch < 1ct/min für die Röhre, aber sonstige Wartung und Anschaffung bedenken
+  \end{tabular}
+\end{center}
+
+\section{3D-Druck}
+\begin{center}
+  \begin{tabular}{|p{0.3\linewidth}|p{0.1\linewidth}|p{0.1\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|}
+    \thead{Material} & \thead{Einheit} & \thead{Preis Mitglieder} & \thead{Preis Externe}  & \thead{Grundlage}\\ \hline
+    FormFutora EasyFil PLA & 1g & 0,06€ & 0,08€ & Klipper \\ \hline  % Einkauf aktuell 0.034€/gramm FormFutura
+    FormFutora EasyFil ABS & 1g & 0,06€ & 0,08€ & Klipper \\ \hline  % Einkauf aktuell 0.034€/gramm FormFutura
+  \end{tabular}
+\end{center}
+
+\end{document}
