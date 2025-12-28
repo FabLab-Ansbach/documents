@@ -1,0 +1,93 @@
+\title{Aufnahmeantrag für natürliche Personen}
+\author{FabLab Ansbach e.V.}
+\date{24. Dezember 2025}
+
+\input{./template}
+\input{../include/forms.tex}
+\input{../include/price.tex}
+	
+\begin{document}
+\setlength{\parindent}{0pt} % Kein Einzug bei neuen Absätzen
+	
+\begin{Form}
+	\setlength{\baselineskip}{2.8\baselineskip}
+	\setlength{\parskip}{0.8ex}
+	
+	Hiermit beantrage ich,
+		
+    \field{Vorname*}{0.45\linewidth}\hfill \field{Nachname*}{0.45\linewidth}	\field{Straße*}{0.45\linewidth}\hfill \field{Hausnummer*}{0.45\linewidth}
+    \field{PLZ*}{0.45\linewidth}\hfill \field{Wohnort*}{0.45\linewidth}
+    \field{Geburtsdatum}{0.45\linewidth} \\
+    \field{E-Mail Adresse*}{0.45\linewidth}\hfill \field{Handynummer}{0.45\linewidth} \\
+    meine Aufnahme ab \fieldinline{day}{5ex}.\fieldinline{month}{5ex}.\fieldinline{year}{10ex} im FabLab Ansbach e.V. als \\
+
+	{\renewcommand{\arraystretch}{1.5}
+		\ctable[pos=htp,width=\textwidth]
+		{X l >{\setlength{\baselineskip}{1.5\baselineskip}}X}{}{
+			\textbf{Ordentliches Mitglied} & \textbf{Jahresbeitrag}			\\
+			\checkbox{Mitgleid über 18 Jahre}{adult} 								
+			& \adultprice €	\NN
+			(max. 2 Kinder unter 18 Jahren sind automatisch ebenfalls Mitglieder)  		                             						\NN		\checkbox{Kind / Jugendlicher bis 18 Jahre}{child} 						
+			& \childprice €	\NN
+			\checkbox{Familienmitglied}{family}										
+			& \familyprice €	\NN
+			\checkbox{Auszubildender, Schüler und Student über 18 Jahre}{student} 	
+			& \studentprice €	\NN
+			\checkbox{Firmenmitglied}{company}										
+			& \companyprice €	\NN
+	}}
+
+	{\renewcommand{\arraystretch}{1.5}
+		\ctable[pos=htp,width=\textwidth]
+		{X l >{\setlength{\baselineskip}{1.5\baselineskip}}X}{}{
+			\textbf{Förderndes Mitglied} & \textbf{Jahresbeitrag}			\\
+			\checkbox{Fördermitglied}{support} 						
+			& Min. \supportprice € 	\NN
+			\checkbox{Premium Fördermitglied}{support plus}			
+			& Min. \supportplusprice € 	\NN
+			\checkbox{Gold Fördermitglied}{support gold}			
+			& Min. \supportgoldprice€	\NN
+	}}
+	
+\end{Form}
+
+Die Satzung und die Beitragsordnung, in der jeweils gültigen Fassung, auf der Webseite \href{https://www.fablab-ansbach.de/verein}{fablab-ansbach.de} habe ich gelesen und erkenne sie hiermit an. \\ \\
+
+\begin{Form}
+	\field{Ort, Datum*}{0.4\linewidth}\hfill \field{Unterschrift*}{0.55\linewidth}
+\end{Form}
+
+\vfill
+{\small Alle mit * gekennzeichneten Felder sind Pflichtfelder und müssen ausgefüllt werden.}
+
+\newpage
+
+\textbf{SEPA-Lastschriftmandat}\\
+Hiermit ermächtige ich den FabLab Ansbach e.V., Gläubiger-ID: DE02LAB00002130635, Zahlungen von meinem Konto
+mittels Lastschrift einzuziehen. Die Mandatsreferenz wird mir nachträglich, vor dem ersten Einzug, mitgeteilt. Gleichzeitig
+weise ich mein Kreditinstitut an, die vom FabLab Ansbach e.V. von meinem Konto eingezogenen Lastschriften einzulösen. \\
+
+{\small Hinweis:
+Ich kann innerhalb von acht Wochen, beginnend mit dem Belastungsdatum, die Erstattung des belasteten Betrages verlangen. Es gelten dabei die mit
+meinem Kreditinstitut vereinbarten Bedingungen.} \\
+
+\begin{Form}
+	\setlength{\baselineskip}{2.8\baselineskip}
+	\setlength{\parskip}{0.8ex}
+	
+    \field{Vorname*}{0.45\linewidth}\hfill \field{Nachname*}{0.45\linewidth}	\field{Straße*}{0.45\linewidth}\hfill \field{Hausnummer*}{0.45\linewidth}
+	\field{PLZ*}{0.45\linewidth}\hfill \field{Wohnort*}{0.45\linewidth}
+	\field{Bank*}{0.45\linewidth}\hfill \field{IBAN*}{0.45\linewidth}	
+		
+\end{Form}
+
+\vspace{10ex}
+
+\begin{Form}
+	\field{Ort, Datum*}{0.4\linewidth}\hfill \field{Unterschrift*}{0.55\linewidth}
+\end{Form}
+
+\vfill
+{\small Alle mit * gekennzeichneten Felder sind Pflichtfelder und müssen ausgefüllt werden.}
+	
+\end{document}
