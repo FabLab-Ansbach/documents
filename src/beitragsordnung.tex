@@ -1,9 +1,13 @@
 \title{Beitragsordnung}
 \author{FabLab Ansbach e.V.}
-\date{07.06.2025}
+\date{17.01.2026}
 
 \input{template}
 \usepackage{enumitem}
+
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{makecell}
 
 \setenumerate[1]{label={(\arabic*)}}
 
@@ -12,7 +16,6 @@
    {\csname the#1\endcsname\quad}%    default appearance
    {\csname #1@cntformat\endcsname}}% enable individual control
 \newcommand\section@cntformat{\S\thesection\quad}   % section level 
-\newcommand*{\thead}[1]{\multicolumn{1}{c}{\bfseries #1}}
 \makeatother
 
 \begin{document}
@@ -38,20 +41,48 @@ Das Beitragsaufkommen der Mitglieder ist eine wesentliche Grundlage für die fin
 \begin{enumerate}
   \item Die Mitglieder haben folgende Beiträge zu zahlen:
   \begin{center}
-    \begin{tabular}{|p{0.7\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|}
-      \thead{Mitgliedergruppe} & \thead{Jahresbeitrag} & \thead{Stimmrechte} \\ \hline
-      Mitglied über 18 Jahre & 84,- € & 1 \\ \small (max. 2 Kinder unter 18 Jahren sind automatisch ebenfalls Mitglieder) & & \normalsize \\ \hline
-      Kinder / Jugendliche bis 18 Jahre & 12,- € & - \\ \hline
-      Familienmitglieder & 126,- € & 2 \\
-      & & \small (1 pro erwachsenem Familienmitglied) \normalsize \\ \hline
-      Auszubildende, Schüler und Studenten über 18 Jahre & 42,- € & 1 \\ \hline
-      Firmenmitglieder mit einem Stimmrecht & 84,- € & 1 \\
-      & & \small (Inhaber, Geschäftsführer oder Mitglied des Vorstandes) \normalsize \\ \hline
-      Fördermitglieder ohne Stimmrecht & Min. 120,- € & - \\ \hline
-      Premium Fördermitglieder ohne Stimmrecht  & Min. 500,- € & - \\ \hline
-      Gold Fördermitglieder ohne Stimmrecht & Min 1000,- € & - \\ \hline
-      Sponsoren & Sachspenden & - \\ \hline
-    \end{tabular}
+  \renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{6pt}
+
+\begin{tabularx}{\linewidth}{|X|p{0.16\linewidth}|>{\raggedright\arraybackslash}p{0.28\linewidth}|}
+\hline
+\thead{Mitgliedergruppe} & \thead{Jahresbeitrag} & \thead{Stimmrechte} \\ \hline
+
+Mitglied über 18 Jahre
+{\small (max. 2 Kinder unter 18 Jahren sind automatisch ebenfalls Mitglieder)}
+& 84,-\,€ & 1 \\ \hline
+
+Kinder / Jugendliche bis 18 Jahre & 12,-\,€ & -- \\ \hline
+
+Familienmitglieder & 126,-\,€ &
+2 {\small (1 pro erwachsenem Familienmitglied)} \\ \hline
+
+Auszubildende, Schüler und Studenten über 18 Jahre & 42,-\,€ & 1 \\ \hline
+\begin{tabular}[t]{@{}l@{}}
+Firmenmitglieder mit einem Stimmrecht\\[2pt]
+bis 5 Mitarbeiter\\
+bis 10 Mitarbeiter\\
+über 10 Mitarbeiter
+\end{tabular}
+&
+\begin{tabular}[t]{@{}l@{}}
+\\[2pt] % leere Zeile für die Überschrift links
+84,-\,€\\
+170,-\,€\\
+250,-\,€
+\end{tabular}
+&
+\raisebox{0pt}[0pt][0pt]{%
+  \parbox[t]{\linewidth}{%
+    1\par{\small(Inhaber, Geschäftsführer oder Mitglied des Vorstandes)}%
+  }%
+}
+\\ \hline
+Fördermitglieder ohne Stimmrecht & Min. 120,- € & - \\ \hline
+Premium Fördermitglieder ohne Stimmrecht  & Min. 500,- € & - \\ \hline
+Gold Fördermitglieder ohne Stimmrecht & Min 1000,- € & - \\ \hline
+Sponsoren & Sachspenden & - \\ \hline
+\end{tabularx}
   \end{center}
   \item Für die Höhe des Beitrags ist der am Fälligkeitstag bestehende Mitgliederstatus maßgeblich.
 \end{enumerate}
@@ -89,6 +120,6 @@ Hat ein Mitglied seine Mitgliedschaft gekündigt, bleibt es bis zum Zeitpunkt de
 \end{enumerate}
 
 \section{Inkrafttreten}
-Diese Verordnung tritt mit Wirkung zum 01.01.2026 in Kraft.
+Diese Verordnung tritt mit Wirkung zum 17.01.2026 in Kraft.
 
 \end{document}
