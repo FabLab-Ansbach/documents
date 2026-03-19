@@ -1,0 +1,81 @@
+\title{Kursanmeldung}
+\author{FabLab Ansbach e.V.}
+
+\input{./template}
+\input{../include/forms.tex}
+	
+\begin{document}
+\setlength{\parindent}{0pt} % Kein Einzug bei neuen Absätzen
+	
+\begin{Form}
+	\setlength{\baselineskip}{1.6\baselineskip}
+	\setlength{\parskip}{0.8ex}
+	
+	Hiermit melde ich, \\
+		\fieldnamed{Vorname*}{vorname_registrant}{0.45\linewidth}\hfill \fieldnamed{Nachname*}{nachname_registrant}{0.45\linewidth} \\
+		den Teilnehmer: \\
+    \fieldnamed{Vorname*}{vorname_participant}{0.45\linewidth}\hfill \fieldnamed{Nachname*}{nachname_participant}{0.45\linewidth}	\fieldnamed{Straße*}{strasse_participant}{0.45\linewidth}\hfill \fieldnamed{Hausnummer*}{hausnummer_participant}{0.45\linewidth}
+    \fieldnamed{PLZ*}{plz_participant}{0.45\linewidth}\hfill \fieldnamed{Wohnort*}{wohnort_participant}{0.45\linewidth}
+    \fieldnamed{E-Mail Adresse*}{email_participant}{0.45\linewidth}\hfill \fieldnamed{Handynummer}{handynummer_participant}{0.45\linewidth} \\
+    für den Kurs \fieldinline{kursname}{20ex} im FabLab Ansbach e.V. an. \hfill \\
+
+	Der Teilnehmer ist \\
+		\checkbox{Mitglied im FabLab Ansbach e.V. und zahlt den ermäßigten Beitrag von \fieldinline{Beitrag Mitglied}{0.1\linewidth}}{checkbox_member} \hfill \\				
+		\checkbox{kein Mitglied im FabLab Ansbach e.V. und zahlt den regulären Beitrag von \fieldinline{Beitrag Nicht-Mitglied}{0.1\linewidth}}{checkbox_nonmember} \\
+
+	Falls der Teilnehmer minderjährig ist, bestätige ich, dass ich erziehungsberechtigt bin und die Erlaubnis habe, den Teilnehmer für diesen Kurs anzumelden. \\
+		\checkbox{Der Teilnehmer ist minderjährig und ich bin erziehungsberechtigt.}{checkbox_minor} \\
+
+	Weitere Kontaktdaten / Notfallkontakte: \\
+	\fieldnamed{Vorname*}{contact1_vorname}{0.33\linewidth} \fieldnamed{Nachname*}{contact1_nachname}{0.33\linewidth}	\fieldnamed{Handynummer*}{contact1_handynummer}{0.33\linewidth} \\
+	\fieldnamed{Vorname*}{contact2_vorname}{0.33\linewidth} \fieldnamed{Nachname*}{contact2_nachname}{0.33\linewidth}	\fieldnamed{Handynummer*}{contact2_handynummer}{0.33\linewidth} \\
+	\fieldnamed{Vorname*}{contact3_vorname}{0.33\linewidth} \fieldnamed{Nachname*}{contact3_nachname}{0.33\linewidth}	\fieldnamed{Handynummer*}{contact3_handynummer}{0.33\linewidth} \\
+
+\end{Form}
+
+\begin{Form}
+	\setlength{\baselineskip}{1.2\baselineskip}
+	\setlength{\parskip}{0.4ex}
+	\fieldnamed{Ort, Datum*}{ort_datum_part1}{0.4\linewidth}\hfill \fieldnamed{Unterschrift*}{unterschrift_part1}{0.55\linewidth}
+\end{Form}
+
+\vfill
+{\small Alle mit * gekennzeichneten Felder sind Pflichtfelder und müssen ausgefüllt werden.}
+
+\newpage
+
+\begin{Form}
+\setlength{\baselineskip}{1.35\baselineskip}
+\setlength{\parskip}{0.6ex}
+
+{\Large\textbf{Einwilligungserklärung für Foto- und Videoaufnahmen}} \\
+
+Während des Kurses im FabLab Ansbach e.V. können Foto- und Videoaufnahmen gemacht werden. \\
+Mit meiner Unterschrift willige ich ein, dass Aufnahmen der teilnehmenden Person erstellt und veröffentlicht werden dürfen. \\
+
+Eine aktive Öffentlichkeitsarbeit ist für Vereine wie unseren essenziell, um über unsere Aktivitäten zu informieren und neue Mitglieder zu gewinnen. Wir bemühen uns dabei, vorrangig Gruppenbilder oder Aufnahmen zu erstellen, auf denen einzelne Personen nicht direkt identifizierbar sind. \\
+
+Die Veröffentlichung kann in folgenden Medien erfolgen: \\
+\checkbox{Website des FabLab Ansbach e.V.}{consent_website} \\
+\checkbox{Social Media: Instagram}{consent_instagram} \\
+\checkbox{Social Media: LinkedIn}{consent_linkedin} \\
+\checkbox{Presse (z. B. Zeitungen, Online-Presse)}{consent_presse} \\
+
+\checkbox{Ich bin mit der Anfertigung von Foto- und Videoaufnahmen während des Kurses einverstanden.}{consent_recording} \\
+
+Mir ist bekannt, dass die Einwilligung freiwillig ist und jederzeit mit Wirkung für die Zukunft widerrufen werden kann. \\
+Der Widerruf ist an den FabLab Ansbach e.V. zu richten. \\
+
+\fieldnamed{Name der teilnehmenden Person*}{consent_name_participant}{0.48\linewidth}
+\hfill
+\fieldnamed{Name Erziehungsberechtigte/r (bei Minderjährigen)*}{consent_name_guardian}{0.48\linewidth} \\
+
+\fieldnamed{Ort, Datum*}{consent_place_date}{0.4\linewidth}
+\hfill
+\fieldnamed{Unterschrift Erziehungsberechtigte/r*}{consent_signature_guardian}{0.55\linewidth} \\
+
+\fieldnamed{Unterschrift minderjährige/r Teilnehmer/in (ab 14 Jahren)}{consent_signature_minor_14plus}{0.55\linewidth}
+\end{Form}
+
+
+\end{document}
