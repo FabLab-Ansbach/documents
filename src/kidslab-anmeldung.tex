@@ -1,15 +1,16 @@
-\title{Kursanmeldung}
+\title{Anmeldung KidsLab}
 \author{FabLab Ansbach e.V.}
-
-\input{./template}
-\input{../include/forms.tex}
+\input{./template.tex}
+\input{./include/forms.tex}
 	
+\usepackage{enumitem}
+
 \begin{document}
 \setlength{\parindent}{0pt} % Kein Einzug bei neuen Absätzen
 	
 \begin{Form}
-	\setlength{\baselineskip}{1.6\baselineskip}
-	\setlength{\parskip}{0.8ex}
+	\renewcommand{\baselinestretch}{1.3}\selectfont
+	\setlength{\parskip}{0.8em}
 	
 	Hiermit melde ich, \\
 		\fieldnamed{Vorname*}{vorname_registrant}{0.45\linewidth}\hfill \fieldnamed{Nachname*}{nachname_registrant}{0.45\linewidth} \\
@@ -17,24 +18,27 @@
     \fieldnamed{Vorname*}{vorname_participant}{0.45\linewidth}\hfill \fieldnamed{Nachname*}{nachname_participant}{0.45\linewidth}	\fieldnamed{Straße*}{strasse_participant}{0.45\linewidth}\hfill \fieldnamed{Hausnummer*}{hausnummer_participant}{0.45\linewidth}
     \fieldnamed{PLZ*}{plz_participant}{0.45\linewidth}\hfill \fieldnamed{Wohnort*}{wohnort_participant}{0.45\linewidth}
     \fieldnamed{E-Mail Adresse*}{email_participant}{0.45\linewidth}\hfill \fieldnamed{Handynummer}{handynummer_participant}{0.45\linewidth} \\
-    für den Kurs \fieldinline{kursname}{30ex} im FabLab Ansbach e.V. an. \hfill \\
-
-	Der Teilnehmer ist \\
-		\checkbox{Mitglied im FabLab Ansbach e.V. und zahlt den ermäßigten Beitrag von \fieldinline{Beitrag Mitglied}{0.1\linewidth}}{checkbox_member} \hfill \\				
-		\checkbox{kein Mitglied im FabLab Ansbach e.V. und zahlt den regulären Beitrag von \fieldinline{Beitrag Nicht-Mitglied}{0.1\linewidth}}{checkbox_nonmember} \\
-
-	Falls der Teilnehmer minderjährig ist, bestätige ich, dass ich erziehungsberechtigt bin und die Erlaubnis habe, den Teilnehmer für diesen Kurs anzumelden. \\
-		\checkbox{Der Teilnehmer ist minderjährig und ich bin erziehungsberechtigt.}{checkbox_minor} \\
-
-	Weitere Kontaktdaten / Notfallkontakte: \\
+    für das KidsLab im FabLab Ansbach e.V. an. \hfill\par
+	\vspace{0.5ex}
+	{\Large\textbf{Teilnahmebedingungen}}
+	\begin{itemize}[itemsep=0pt, topsep=0pt]
+		\item Die Teilnehmer frei kommen und gehen, es gibt keinen festen Beginn / festes Ende. Die Betreuer des FabLabs sind mindestens von 15:00 bis 18:00 vor Ort.
+		\item Das FabLab Ansbach übernimmt keine Haftung für Schäden, die außerhalb der Veranstaltung enstehen. Der angehängte Haftungsauschluss ist zu beachten.
+		\item Die Teilnehmer verpflichten sich, den Anweisungen des KidsLab-Betreuer folge zu leisten.
+		\item Anfallende Materialkosten müssen, sofern nicht anders vereinbart, direkt Bar bezahlt werden
+	\end{itemize}
+	\vspace{0.8em}
+	{\Large\textbf{Kontaktdaten}}\\
+	Kontaktdaten für Notfälle\\
 	\fieldnamed{Vorname*}{contact1_vorname}{0.33\linewidth} \fieldnamed{Nachname*}{contact1_nachname}{0.33\linewidth}	\fieldnamed{Handynummer*}{contact1_handynummer}{0.33\linewidth} \\
 	\fieldnamed{Vorname*}{contact2_vorname}{0.33\linewidth} \fieldnamed{Nachname*}{contact2_nachname}{0.33\linewidth}	\fieldnamed{Handynummer*}{contact2_handynummer}{0.33\linewidth} \\
 	\fieldnamed{Vorname*}{contact3_vorname}{0.33\linewidth} \fieldnamed{Nachname*}{contact3_nachname}{0.33\linewidth}	\fieldnamed{Handynummer*}{contact3_handynummer}{0.33\linewidth} \\
+	\fieldnamed{Vorname*}{contact4_vorname}{0.33\linewidth} \fieldnamed{Nachname*}{contact4_nachname}{0.33\linewidth}	\fieldnamed{Handynummer*}{contact4_handynummer}{0.33\linewidth} \\
 
 \end{Form}
 
 \begin{Form}
-	\setlength{\baselineskip}{1.2\baselineskip}
+	\renewcommand{\baselinestretch}{1.2}\selectfont
 	\setlength{\parskip}{0.4ex}
 	\fieldnamed{Ort, Datum*}{ort_datum_part1}{0.4\linewidth}\hfill \fieldnamed{Unterschrift*}{unterschrift_part1}{0.55\linewidth}
 \end{Form}
@@ -43,9 +47,26 @@
 {\small Alle mit * gekennzeichneten Felder sind Pflichtfelder und müssen ausgefüllt werden.}
 
 \newpage
+\renewcommand{\baselinestretch}{1.35}\selectfont
+\setlength{\parskip}{0.6ex}
+{\Large\textbf{Haftungsausschluss}} \\
+Im KidsLab werden den Teilnehmenden im Rahmen der Veranstaltung, unter Berücksichtigung von Alter, Entwicklungsstand und individuellen Kenntnissen, altersgerechte Aufgaben übertragen. Trotz sorgfältiger Betreuung und Einweisung lassen sich dabei Risiken sowie Sach- oder Personenschäden nicht vollständig ausschließen. \\
+
+Die Teilnahme erfolgt im Rahmen der üblichen Veranstaltungsrisiken. Der FabLab Ansbach e.V. sowie die eingesetzten Betreuer haften nur nach den gesetzlichen Vorschriften. Eine Haftung für Schäden, die insbesondere aus der Nichtbeachtung von Anweisungen, unsachgemäßer Nutzung von Werkzeugen, Geräten oder Materialien oder aus dem individuellen Verhalten der teilnehmenden Person entstehen, ist im gesetzlich zulässigen Umfang ausgeschlossen. \\
+
+Für Schäden, die eine teilnehmende Person vorsätzlich oder fahrlässig verursacht, haften die verantwortliche Person selbst beziehungsweise die gesetzlichen Vertreter nach den gesetzlichen Bestimmungen. Dies gilt insbesondere für Schäden am Eigentum des FabLab Ansbach e.V. oder an von Dritten zur Verfügung gestellten Gegenständen.\\
 
 \begin{Form}
-\setlength{\baselineskip}{1.35\baselineskip}
+\fieldnamed{Ort, Datum*}{haftung_place_date}{0.4\linewidth}
+\hfill
+\fieldnamed{Unterschrift Erziehungsberechtigte/r*}{haftung_signature_guardian}{0.55\linewidth} \\
+
+\fieldnamed{Unterschrift Teilnehmer/in}{haftung_signature_minor_14plus}{0.55\linewidth}
+\end{Form}
+
+\newpage
+\begin{Form}
+\renewcommand{\baselinestretch}{1.35}\selectfont
 \setlength{\parskip}{0.6ex}
 
 {\Large\textbf{Einwilligungserklärung für Foto- und Videoaufnahmen}} \\
